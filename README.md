@@ -1,4 +1,4 @@
-# Redux-Counter
+# Redux-Counter using Redux Toolkit
 Modern Redux with Redux Toolkit
 
 ## Introduction:
