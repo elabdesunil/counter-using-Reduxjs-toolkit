@@ -6,7 +6,7 @@ As a part of redux exercise in my bootcamp in 2019, we created the following cou
 
 The difference is quite huge, in the sense that redux toolkit is a lot more easier to understand, write and debug.
 The application with the redux dev tool visualization looks like this:
-[img](counter-using-modern-redux-toolkit.gif)
+![](counter-using-modern-redux-toolkit.gif)
 
 ## Main Codes:
 
