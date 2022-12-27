@@ -1,6 +1,20 @@
 # Redux-Counter using Redux Toolkit
 Modern Redux with Redux Toolkit
 
+
+- [Redux-Counter using Redux Toolkit](#redux-counter-using-redux-toolkit)
+  - [Introduction:](#introduction)
+  - [Main Files and their contents:](#main-files-and-their-contents)
+    - [`store.js`](#storejs)
+    - [`index.js`](#indexjs)
+    - [`App.js`](#appjs)
+    - [`counterSlice.js`](#counterslicejs)
+    - [`resultsSlice.js`](#resultsslicejs)
+    - [`Counter.js` - the main renderer](#counterjs---the-main-renderer)
+    - [`useSelector` and `useDispatch` hooks are used](#useselector-and-usedispatch-hooks-are-used)
+  - [Conclusion](#conclusion)
+
+
 ## Introduction:
 As a part of redux exercise in my bootcamp in 2019, we created the following counter [project](https://github.com/sunilale0/redux-counter) using the, now, legacy redux. I wanted to see how different/easier Redux Toolkit is from the legacy redux by modifying the project using `@reduxjs/toolkit`. 
 
@@ -8,10 +22,12 @@ The difference is quite huge, in the sense that redux toolkit is a lot more easi
 The application with the redux dev tool visualization looks like this:
 ![](counter-using-modern-redux-toolkit.gif)
 
-## Main Codes:
+## Main Files and their contents:
 
 The code base shortened by quite a lot. I'd say, the number of lines of code in total was halved after implementing the modern redux toolkit.
 
+
+### `store.js`
 ```javascript
 // /redux/store.js
 import { configureStore } from "@reduxjs/toolkit";
@@ -26,8 +42,10 @@ export default configureStore({
 });
 
 // ----------------------------------------------------------------
+```
 
-
+### `index.js`
+```javascript
 // index.js
 
 import React from "react";
@@ -53,6 +71,10 @@ serviceWorker.unregister();
 // ------------------------------------------------------------------
 
 
+```
+
+### `App.js`
+```javascript
 // App.js
 import React from 'react';
 import logo from './logo.svg';
@@ -72,7 +94,10 @@ function App() {
 
 export default App;
 // ----------------------------------------------------------------
+```
 
+### `counterSlice.js`
+```js
 // redux/counterSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -101,9 +126,11 @@ export const { increment, decrement, add, subtract } = counterSlice.actions;
 
 export default counterSlice.reducer;
 // -----------------------------------------------------------------
+```
 
-
-// redux/counterSlice.js
+### `resultsSlice.js`
+```js
+// redux/resultsSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 export const resultsSlice = createSlice({
@@ -129,7 +156,10 @@ export const { updateResult, deleteResult } = resultsSlice.actions;
 export default resultsSlice.reducer;
 // ----------------------------------------------------------------
 
+```
 
+### `Counter.js` - the main renderer
+```js
 // /containers/Counter/Counter.js
 
 import React from "react";
